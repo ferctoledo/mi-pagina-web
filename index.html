@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Fernando Toledo – Senior Macroeconomic Advisor with 20+ years of experience">
+  <meta name="author" content="Fernando Toledo">
+  <title>Fernando Toledo | Economista</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background-color: #f6f9fc; color: #1a2c3e; line-height: 1.5; scroll-behavior: smooth; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 2rem 1.5rem; position: relative; }
+    h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; }
+    h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 0.5rem; background: linear-gradient(135deg, #0f2b3d 0%, #1c5a7a 100%); background-clip: text; -webkit-background-clip: text; color: transparent; }
+    h2 { font-size: 1.85rem; margin-bottom: 1.5rem; border-left: 5px solid #1e6f5c; padding-left: 1rem; color: #0f2b3d; }
+    .section { margin-bottom: 3.5rem; }
+    .hero { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 2rem; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(30, 111, 92, 0.2); }
+    .hero-info { flex: 2; }
+    .hero-badge { display: inline-block; background: #eef2f5; padding: 0.25rem 0.8rem; border-radius: 40px; font-size: 0.85rem; font-weight: 500; color: #1e6f5c; margin-bottom: 1rem; }
+    .title { font-size: 1.4rem; font-weight: 500; color: #2c5a74; margin-bottom: 1rem; }
+    .contact-bar { display: flex; flex-wrap: wrap; gap: 1.2rem; margin: 1.2rem 0 1rem; }
+    .contact-bar a, .contact-bar span { display: inline-flex; align-items: center; gap: 8px; color: #2c5a74; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+    .contact-bar a:hover { color: #1e6f5c; }
+    .btn-cv {
+      background: #1e6f5c;
+      color: white !important;
+      padding: 0.6rem 1.2rem;
+      border-radius: 40px;
+      transition: all 0.2s;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-cv:hover {
+      background: #0f5444;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(30,111,92,0.2);
+      color: white !important;
+    }
+    .hero-avatar { flex: 0 0 120px; text-align: center; position: relative; }
+    .hero-avatar img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+      border: 3px solid white;
+      background-color: #eef2f5;
+      display: block;
+    }
+    .avatar-placeholder {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #d9e6f2, #c0d9e8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #1e6f5c;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+      border: 3px solid white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    .summary-card { background: white; border-radius: 28px; padding: 1.8rem 2rem; margin-bottom: 2.5rem; box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.05); border: 1px solid #eef2f8; }
+    .exp-item, .pub-item, .honor-item, .skill-cat { background: white; border-radius: 20px; padding: 1.5rem; margin-bottom: 1.25rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02); border: 1px solid #e9edf2; transition: all 0.2s ease; }
+    .exp-item:hover, .pub-item:hover { border-color: #cbdde6; box-shadow: 0 12px 22px -12px rgba(0,0,0,0.08); }
+    .exp-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; margin-bottom: 0.75rem; }
+    .exp-title { font-size: 1.3rem; font-weight: 700; color: #1e4663; }
+    .exp-company { font-weight: 600; color: #1e6f5c; }
+    .exp-date { font-size: 0.85rem; color: #6c86a3; font-weight: 500; }
+    .exp-location { font-size: 0.85rem; color: #6c86a3; display: flex; align-items: center; gap: 5px; margin-top: 4px; }
+    .exp-desc { margin-top: 1rem; padding-left: 0.2rem; }
+    .exp-desc ul { list-style: none; }
+    .exp-desc li { margin-bottom: 0.6rem; display: flex; gap: 12px; align-items: baseline; }
+    .exp-desc li i { color: #1e6f5c; font-size: 0.85rem; margin-top: 0.2rem; width: 20px; }
+    .pub-item { padding: 1.2rem 1.5rem; }
+    .pub-title { font-weight: 700; font-size: 1.05rem; color: #1e4663; }
+    .pub-detail { font-size: 0.9rem; color: #4b6f8c; margin-top: 6px; }
+    .grid-2col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .honor-item, .skill-cat { background: #ffffff; padding: 1rem 1.3rem; margin-bottom: 0; display: flex; align-items: center; gap: 12px; }
+    .honor-item i, .skill-cat i { font-size: 1.4rem; color: #1e6f5c; width: 32px; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .skill-tag { background: #eef2f7; padding: 0.3rem 0.9rem; border-radius: 40px; font-size: 0.85rem; font-weight: 500; color: #1e4663; }
+    footer { border-top: 1px solid #dee5ec; margin-top: 3rem; padding: 2rem 0 1.5rem; text-align: center; font-size: 0.85rem; color: #5f7f9a; }
+    .lang-switch { position: absolute; top: 1.5rem; right: 1.5rem; display: flex; gap: 0.5rem; background: white; padding: 0.3rem 0.6rem; border-radius: 40px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; z-index: 10; }
+    .lang-switch button { background: none; border: none; font-weight: 500; cursor: pointer; padding: 0.2rem 0.6rem; border-radius: 30px; transition: all 0.2s; color: #5f7f9a; }
+    .lang-switch button.active { background: #1e6f5c; color: white; }
+    @media (max-width: 750px) {
+      .container { padding: 1.2rem; }
+      h1 { font-size: 2.2rem; }
+      .hero { flex-direction: column; align-items: flex-start; }
+      .grid-2col { grid-template-columns: 1fr; }
+      .exp-header { flex-direction: column; gap: 6px; }
+      .lang-switch { top: 1rem; right: 1rem; }
+    }
+    a { text-decoration: none; }
+    .text-small { font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="lang-switch">
+    <button id="lang-en" class="active">EN</button>
+    <button id="lang-es">ES</button>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-info">
+      <div class="hero-badge" data-en="20+ years · Central Bank & Multilateral Experience" data-es="20+ años · Banco Central y Experiencia Multilateral"><i class="fas fa-chart-line"></i> 20+ years · Central Bank & Multilateral Experience</div>
+      <h1>Fernando Toledo</h1>
+      <div class="title" data-en="Senior Macroeconomic Advisor | Monetary & Financial Policy Expert" data-es="Asesor Macroeconómico Senior | Experto en Política Monetaria y Financiera">Senior Macroeconomic Advisor | Monetary & Financial Policy Expert</div>
+      <div class="contact-bar">
+        <a href="mailto:toledo.fernando.cesar@gmail.com"><i class="fas fa-envelope"></i> toledo.fernando.cesar@gmail.com</a>
+        <span><i class="fas fa-phone-alt"></i> +54 221 5386087</span>
+        <a href="https://www.linkedin.com/in/fernando-toledo-19968aa8/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="#" id="downloadCvBtn" class="btn-cv"><i class="fas fa-download"></i> <span data-en="Download CV (PDF)" data-es="Descargar CV (PDF)">Download CV (PDF)</span></a>
+      </div>
+      <div class="text-small" style="margin-top: 0.5rem;"><i class="far fa-calendar-alt"></i> <span data-en="Last updated: March 2026 · La Plata, Buenos Aires, Argentina" data-es="Última actualización: Marzo 2026 · La Plata, Buenos Aires, Argentina">Last updated: March 2026 · La Plata, Buenos Aires, Argentina</span></div>
+    </div>
+    <div class="hero-avatar">
+      <img id="profile-img" src="Foto FT.jpeg" alt="Fernando Toledo" style="position: relative; z-index: 2;">
+      <div id="avatar-placeholder" class="avatar-placeholder" style="display: none;">FT</div>
+    </div>
+  </div>
+
+  <!-- Professional Summary -->
+  <div class="summary-card">
+    <i class="fas fa-quote-left" style="color:#1e6f5c; opacity:0.5; margin-right:8px;"></i>
+    <p data-en="Distinguished economist with 20+ years of experience advising central bank boards and finance ministries on monetary policy, international finance, and structural development. Proven track record of translating complex macroeconomic data into high-impact policy decisions and publishing influential research in leading journals (Springer, Elsevier, Taylor & Francis). Expert in building macroeconomic models and leading multidisciplinary teams to advise multilateral organizations (CEPAL, OIT, ALADI, OLADE). Fluent in English and Spanish, with extensive experience presenting findings at global forums (World Inequality Conference)."
+       data-es="Economista distinguido con más de 20 años de experiencia asesorando directorios de bancos centrales y ministerios de economía en política monetaria, finanzas internacionales y desarrollo estructural. Trayectoria comprobada en traducir datos macroeconómicos complejos en decisiones de política de alto impacto y publicar investigaciones influyentes en revistas líderes (Springer, Elsevier, Taylor & Francis). Experto en construcción de modelos macroeconómicos y liderazgo de equipos multidisciplinarios para asesorar a organismos multilaterales (CEPAL, OIT, ALADI, OLADE). Bilingüe (inglés/español) con amplia experiencia presentando hallazgos en foros globales (Conferencia Mundial sobre Desigualdad).">
+      Distinguished economist with 20+ years of experience advising central bank boards and finance ministries on monetary policy, international finance, and structural development. Proven track record of translating complex macroeconomic data into high-impact policy decisions and publishing influential research in leading journals (Springer, Elsevier, Taylor & Francis). Expert in building macroeconomic models and leading multidisciplinary teams to advise multilateral organizations (CEPAL, OIT, ALADI, OLADE). Fluent in English and Spanish, with extensive experience presenting findings at global forums (World Inequality Conference).
+    </p>
+  </div>
+
+  <!-- Professional Experience -->
+  <div class="section">
+    <h2><i class="fas fa-briefcase"></i> <span data-en="Experience" data-es="Experiencia">Experience</span></h2>
+
+    <!-- OLADE -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div><span class="exp-title" data-en="Expert Consultant on Regional Gas Integration" data-es="Consultor Experto en Integración Gasífera Regional">Consultor Experto en Integración Gasífera Regional</span> <span class="exp-company">@ OLADE</span></div>
+        <div class="exp-date">Nov 2024 – Feb 2025</div>
+      </div>
+      <div class="exp-location"><i class="fas fa-map-marker-alt"></i> <span data-en="Montevideo / Remote" data-es="Montevideo / Remoto">Montevideo / Remote</span></div>
+      <div class="exp-desc">
+        <ul>
+          <li><i class="fas fa-check-circle"></i> <span data-en="Prepared two working papers on Gas Integration for MERCOSUR countries. Presented both working papers at CAF headquarters in Montevideo in a meeting with high‑ranking officials from various countries in the region." data-es="Elaboré dos documentos de trabajo sobre Integración Gasífera para los países del MERCOSUR. Presenté ambos documentos de trabajo en la sede CAF de Montevideo en una reunión con funcionarios de alto rango de distintos países de la región.">Prepared two working papers on Gas Integration for MERCOSUR countries. Presented both working papers at CAF headquarters in Montevideo in a meeting with high‑ranking officials from various countries in the region.</span></li>
+          <li><i class="fas fa-check-circle"></i> <span data-en="The resulting documents were used as inputs to discuss regional energy policy implications by energy ministers of the region." data-es="Los documentos resultantes fueron utilizados como insumos para discutir implicancias de política energética regional por ministros de energía de la región.">The resulting documents were used as inputs to discuss regional energy policy implications by energy ministers of the region.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- BCRA -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div><span class="exp-title" data-en="Advisor to the Board / Second Vice Presidency" data-es="Asesor del Directorio / Vicepresidencia Segunda">Asesor del Directorio / Vicepresidencia Segunda</span> <span class="exp-company">@ BCRA</span></div>
+        <div class="exp-date">2021 – 2023</div>
+      </div>
+      <div class="exp-location"><i class="fas fa-map-marker-alt"></i> Buenos Aires</div>
+      <div class="exp-desc"><ul><li><i class="fas fa-check-circle"></i> <span data-en="Advised the Vice President on academic matters, providing real-time analysis and theoretical frameworks that underpinned monetary and financial policy decisions." data-es="Asesoré al Vicepresidente en temas académicos, brindando análisis en tiempo real y marcos teóricos que sustentaron decisiones de política monetaria y financiera.">Advised the Vice President on academic matters, providing real-time analysis and theoretical frameworks that underpinned monetary and financial policy decisions.</span></li><li><i class="fas fa-check-circle"></i> <span data-en="Directed the Vice President's research agenda, managing junior analysts and supervising 5+ working papers in international finance and monetary economics." data-es="Dirigí la agenda de investigación de la Vicepresidencia, gestionando analistas junior y supervisando más de 5 documentos de trabajo en finanzas internacionales y economía monetaria.">Directed the Vice President's research agenda, managing junior analysts and supervising 5+ working papers in international finance and monetary economics.</span></li><li><i class="fas fa-check-circle"></i> <span data-en="Coordinated internal economics seminars with national and international researchers, strengthening academia–policy dialogue." data-es="Coordiné seminarios internos de economía con investigadores nacionales e internacionales, fortaleciendo el diálogo entre academia y política.">Coordinated internal economics seminars with national and international researchers, strengthening academia–policy dialogue.</span></li></ul></div>
+    </div>
+
+    <!-- Ministerio de Economía -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div><span class="exp-title" data-en="Coordinator of Working Papers and Academic Radar" data-es="Coordinador de Documentos de Trabajo y Radar Académico">Coordinador de Documentos de Trabajo y Radar Académico</span> <span class="exp-company">@ Ministerio de Economía de la Nación</span></div>
+        <div class="exp-date">2013 – 2021</div>
+      </div>
+      <div class="exp-location"><i class="fas fa-map-marker-alt"></i> Buenos Aires</div>
+      <div class="exp-desc"><ul><li><i class="fas fa-check-circle"></i> <span data-en="Managed and mentored a team of 3–5 economists, ensuring rigorous technical analysis in macroeconomic working papers that informed Secretariat-level policy decisions." data-es="Gestioné y mentoreé un equipo de 3 a 5 economistas, asegurando análisis técnico riguroso en documentos de trabajo macroeconómicos que informaron decisiones de política a nivel de Secretaría.">Managed and mentored a team of 3–5 economists, ensuring rigorous technical analysis in macroeconomic working papers that informed Secretariat-level policy decisions.</span></li><li><i class="fas fa-check-circle"></i> <span data-en="Led production of the monthly “Radar Académico”, synthesizing global academic debates for decision-makers." data-es="Lideré la producción del “Radar Académico” mensual, sintetizando debates académicos globales para los tomadores de decisión.">Led production of the monthly “Radar Académico”, synthesizing global academic debates for decision-makers.</span></li><li><i class="fas fa-check-circle"></i> <span data-en="Designed and supervised the continuous update of a structural macroeconomic model used for official forecasts, improving short- and medium-term projection accuracy." data-es="Diseñé y supervisé la actualización continua de un modelo macroeconómico estructural utilizado para pronósticos oficiales, mejorando la precisión de las proyecciones de corto y mediano plazo.">Designed and supervised the continuous update of a structural macroeconomic model used for official forecasts, improving short- and medium-term projection accuracy.</span></li></ul></div>
+    </div>
+
+    <!-- UNSAM -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div><span class="exp-title" data-en="Lecturer and Academic Coordinator (Master in Economic Development)" data-es="Docente y Coordinador Académico (Maestría en Desarrollo Económico)">Docente y Coordinador Académico (Maestría en Desarrollo Económico)</span> <span class="exp-company">@ UNSAM - IDAES</span></div>
+        <div class="exp-date">2012 – 2018</div>
+      </div>
+      <div class="exp-location"><i class="fas fa-map-marker-alt"></i> Buenos Aires</div>
+      <div class="exp-desc"><ul><li><i class="fas fa-check-circle"></i> <span data-en="Designed and taught International Finance module (Stabilization Programmes, New Macroeconomic Consensus), evaluating 30+ graduate students per cohort." data-es="Diseñé y dicté el módulo de Finanzas Internacionales (Programas de Estabilización, Nuevo Consenso Macroeconómico), evaluando más de 30 estudiantes de posgrado por cohorte.">Designed and taught International Finance module (Stabilization Programmes, New Macroeconomic Consensus), evaluating 30+ graduate students per cohort.</span></li><li><i class="fas fa-check-circle"></i> <span data-en="Led academic coordination of the master’s programme, managing curriculum and acting as liaison between faculty and institute directors." data-es="Lideré la coordinación académica de la maestría, gestionando el plan de estudios y actuando como enlace entre el cuerpo docente y los directores del instituto.">Led academic coordination of the master’s programme, managing curriculum and acting as liaison between faculty and institute directors.</span></li><li><i class="fas fa-check-circle"></i> <span data-en="Supervised 40+ thesis students in methodological design and economic modelling, resulting in a high completion rate." data-es="Supervisé más de 40 estudiantes de tesis en diseño metodológico y modelización económica, logrando una alta tasa de finalización.">Supervised 40+ thesis students in methodological design and economic modelling, resulting in a high completion rate.</span></li></ul></div>
+    </div>
+
+    <!-- Organismos Multilaterales -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div><span class="exp-title" data-en="Consultant and Researcher" data-es="Consultor e Investigador">Consultor e Investigador</span> <span class="exp-company">@ CEPAL, OIT, ALADI, CEFID-A, FIDE</span></div>
+        <div class="exp-date">2007 – 2012</div>
+      </div>
+      <div class="exp-location"><i class="fas fa-globe-americas"></i> <span data-en="Buenos Aires / Regional" data-es="Buenos Aires / Regional">Buenos Aires / Regional</span></div>
+      <div class="exp-desc"><ul><li><i class="fas fa-check-circle"></i> <span data-en="Co-authored 2 book chapters for the ILO analyzing Argentina's and Brazil's responses to the 2009 crisis, evaluating employment impact of counter-cyclical policies." data-es="Coautor de 2 capítulos de libro para la OIT analizando las respuestas de Argentina y Brasil a la crisis de 2009, evaluando el impacto laboral de las políticas anticíclicas.">Co-authored 2 book chapters for the ILO analyzing Argentina's and Brazil's responses to the 2009 crisis, evaluating employment impact of counter-cyclical policies.</span></li><li><i class="fas fa-check-circle"></i> <span data-en="Drafted a report for ECLAC (Buenos Aires office) that contributed to the framework document “Structural Change for Equality” (Thirty-Fourth Session)." data-es="Redacté un informe para la CEPAL (oficina de Buenos Aires) que contribuyó al documento marco “Cambio estructural para la igualdad” (Trigésimo cuarto período de sesiones).">Drafted a report for ECLAC (Buenos Aires office) that contributed to the framework document “Structural Change for Equality” (Thirty-Fourth Session).</span></li><li><i class="fas fa-check-circle"></i> <span data-en="Researched social capital, ICTs and inequality for DIRSI, winning the 2nd Young Researchers Competition." data-es="Investigué sobre capital social, TIC y desigualdad para DIRSI, ganando el 2° Concurso de Jóvenes Investigadores.">Researched social capital, ICTs and inequality for DIRSI, winning the 2nd Young Researchers Competition.</span></li><li><i class="fas fa-check-circle"></i> <span data-en="Analysed CGE model results for ALADI to assess regional trade integration, delivering reports to the Ministry of Foreign Affairs." data-es="Analicé resultados de modelos de equilibrio general computable (CGE) para ALADI para evaluar la integración comercial regional, entregando informes al Ministerio de Relaciones Exteriores.">Analysed CGE model results for ALADI to assess regional trade integration, delivering reports to the Ministry of Foreign Affairs.</span></li></ul></div>
+    </div>
+
+    <!-- CONICET + Provincia -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div><span class="exp-title" data-en="Researcher and Technical Advisor (Provincial and Labor Economics)" data-es="Investigador y Asesor Técnico (Economía Provincial y Laboral)">Investigador y Asesor Técnico (Economía Provincial y Laboral)</span> <span class="exp-company">@ Ministerio de Economía PBA & CONICET</span></div>
+        <div class="exp-date">2003 – 2011</div>
+      </div>
+      <div class="exp-location"><i class="fas fa-map-marker-alt"></i> La Plata</div>
+      <div class="exp-desc"><ul><li><i class="fas fa-check-circle"></i> <span data-en="Awarded prestigious 4-year doctoral fellowship (CONICET) researching poverty determinants and exchange rate pass-through; produced 4 high-impact papers." data-es="Obtuve una prestigiosa beca doctoral de 4 años (CONICET) para investigar determinantes de la pobreza y traspaso del tipo de cambio; produje 4 artículos de alto impacto.">Awarded prestigious 4-year doctoral fellowship (CONICET) researching poverty determinants and exchange rate pass-through; produced 4 high-impact papers.</span></li><li><i class="fas fa-check-circle"></i> <span data-en="Built empirical models to analyse poverty determinants, exchange rate pass-through and provincial exports; findings presented at ALAS, ALAST conferences." data-es="Construí modelos empíricos para analizar determinantes de la pobreza, traspaso del tipo de cambio y exportaciones provinciales; hallazgos presentados en conferencias ALAS, ALAST.">Built empirical models to analyse poverty determinants, exchange rate pass-through and provincial exports; findings presented at ALAS, ALAST conferences.</span></li></ul></div>
+    </div>
+  </div>
+
+  <!-- Publications -->
+  <div class="section">
+    <h2><i class="fas fa-book-open"></i> <span data-en="Selected Publications (20+ peer-reviewed)" data-es="Publicaciones Seleccionadas (más de 20 artículos con referato)">Selected Publications (20+ peer-reviewed)</span></h2>
+    <div class="pub-item"><div class="pub-title">“Estimación de curva de Phillips y cociente de sacrificio en Argentina” (2025)</div><div class="pub-detail">Revista de Economía Política de Buenos Aires (coautor)</div></div>
+    <div class="pub-item"><div class="pub-title">“Unanticipated Shocks to the Fed and Exchange Rate Market Pressures” (2025)</div><div class="pub-detail">Open Economies Review · Springer (coautor)</div></div>
+    <div class="pub-item"><div class="pub-title">Monetary Policy Challenges in Latin America (2023)</div><div class="pub-detail">Coeditor & coauthor · New Directions in Post-Keynesian Economics, Edward Elgar Publishing</div></div>
+    <div class="pub-item"><div class="pub-title">“Global Financial Cycle, Commodities Terms of Trade and Financial Spreads” (2023)</div><div class="pub-detail">Structural Change and Economic Dynamics · Elsevier</div></div>
+    <div class="pub-item"><div class="pub-title">“The Global Financial Cycle and External Debt” (2022)</div><div class="pub-detail">Journal of Post Keynesian Economics · Taylor & Francis</div></div>
+    <div class="pub-item"><div class="pub-title" style="font-style:italic;"><span data-en="+ 15 additional articles in leading journals and book chapters" data-es="+ 15 artículos adicionales en revistas líderes y capítulos de libro">+ 15 additional articles in leading journals and book chapters</span></div><div class="pub-detail" data-en="Full list available on request / academic profiles" data-es="Lista completa disponible a pedido / perfiles académicos">Full list available on request / academic profiles</div></div>
+  </div>
+
+  <!-- Education & Honors -->
+  <div class="section">
+    <h2><i class="fas fa-graduation-cap"></i> <span data-en="Education & Distinctions" data-es="Educación y Distinciones">Education & Distinctions</span></h2>
+    <div class="grid-2col">
+      <div class="honor-item"><i class="fas fa-university"></i><div><strong data-en="Master in Economics" data-es="Magister en Economía">Magister en Economía</strong><br>Universidad Nacional de La Plata</div></div>
+      <div class="honor-item"><i class="fas fa-trophy"></i><div><strong data-en="Bachelor in Economics" data-es="Licenciado en Economía">Licenciado en Economía</strong><br><span data-en="Highest GPA (Dr. Joaquín V. González Distinction) · Top 5 graduates nationally (Manuel Belgrano Award)" data-es="Mejor promedio de la Facultad (Distinción Dr. Joaquín V. González) · Distinguido entre los 5 mejores graduados (Premio Manuel Belgrano)">Highest GPA (Dr. Joaquín V. González Distinction) · Top 5 graduates nationally (Manuel Belgrano Award)</span></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><i class="fas fa-medal"></i> <span data-en="Honors & Awards" data-es="Premios y Distinciones">Honors & Awards</span></h2>
+    <div class="grid-2col">
+      <div class="honor-item"><i class="fas fa-globe"></i><div><strong data-en="BCRA Fellow" data-es="BCRA Fellow">BCRA Fellow</strong> – <span data-en="Represented Argentina at the 3rd Meeting of Laureates in Economic Sciences, Lindau, Germany." data-es="Representé a Argentina en la 3ª Reunión de Premios Nobel de Ciencias Económicas, Lindau, Alemania.">Represented Argentina at the 3rd Meeting of Laureates in Economic Sciences, Lindau, Germany.</span></div></div>
+      <div class="honor-item"><i class="fas fa-award"></i><div><strong data-en="Manuel Belgrano Award" data-es="Premio Manuel Belgrano">Premio Manuel Belgrano</strong> – <span data-en="Distinguished among the top 5 university graduates nationally." data-es="Distinguido entre los 5 mejores graduados universitarios a nivel nacional.">Distinguished among the top 5 university graduates nationally.</span></div></div>
+      <div class="honor-item"><i class="fas fa-chart-line"></i><div><strong data-en="Research Award" data-es="Premio de Investigación">Research Award</strong> – <span data-en="Winner, 2nd Annual Research Competition for Young Economists (DIRSI)." data-es="Ganador del 2º Concurso Anual de Investigación para Jóvenes Economistas (DIRSI).">Winner, 2nd Annual Research Competition for Young Economists (DIRSI).</span></div></div>
+      <div class="honor-item"><i class="fas fa-star-of-life"></i><div><strong data-en="Top Academic Performance" data-es="Mejor Rendimiento Académico">Top Academic Performance</strong> – <span data-en="Dr. Joaquín V. González Distinction for highest GPA, Universidad Nacional de La Plata." data-es="Distinción Dr. Joaquín V. González al mejor promedio, Universidad Nacional de La Plata.">Dr. Joaquín V. González Distinction for highest GPA, Universidad Nacional de La Plata.</span></div></div>
+    </div>
+  </div>
+
+  <!-- Technical Expertise -->
+  <div class="section">
+    <h2><i class="fas fa-microchip"></i> <span data-en="Technical Expertise & Tools" data-es="Experiencia Técnica y Herramientas">Technical Expertise & Tools</span></h2>
+    <div class="grid-2col">
+      <div class="skill-cat"><i class="fas fa-chart-simple"></i><div><strong data-en="Modeling" data-es="Modelización">Modeling</strong><div class="skill-tags"><span class="skill-tag">Structural Macro Models</span><span class="skill-tag">CGE Models</span><span class="skill-tag">Panel Data (GMM, PVAR)</span><span class="skill-tag">Time Series</span></div></div></div>
+      <div class="skill-cat"><i class="fas fa-code"></i><div><strong data-en="Software & Tools" data-es="Software y Herramientas">Software & Tools</strong><div class="skill-tags"><span class="skill-tag">EViews</span><span class="skill-tag">Stata</span><span class="skill-tag">R</span><span class="skill-tag">Econometric Packages</span></div></div></div>
+    </div>
+    <div style="margin-top: 1.2rem; background: white; border-radius: 20px; padding: 1rem 1.5rem; border:1px solid #e9edf2;">
+      <i class="fas fa-language" style="color:#1e6f5c; margin-right: 8px;"></i> <strong data-en="Languages:" data-es="Idiomas:">Languages:</strong> <span data-en="Spanish (Native), English (Fluent – academic writing, presentations, policy discussion)" data-es="Español (nativo), Inglés (fluido – redacción académica, presentaciones, discusión de políticas)">Spanish (Native), English (Fluent – academic writing, presentations, policy discussion)</span>
+    </div>
+  </div>
+
+  <!-- Academic Service & Affiliations -->
+  <div class="section">
+    <h2><i class="fas fa-users"></i> <span data-en="Academic Service & Global Presence" data-es="Servicio Académico y Presencia Global">Academic Service & Global Presence</span></h2>
+    <div class="exp-item" style="margin-bottom:0;">
+      <div><strong><i class="fas fa-pen-fancy"></i> <span data-en="Reviewer" data-es="Revisor">Reviewer</span></strong><br>Cambridge Journal of Economics, Metroeconomica, Structural Change and Economic Dynamics, Review of Political Economy, Journal of Applied Economics.</div>
+      <div style="margin-top: 1rem;"><strong><i class="fas fa-chalkboard-user"></i> <span data-en="Conference Presenter & Panelist" data-es="Presentador en Conferencias y Panelista">Conference Presenter & Panelist</span></strong><br><span data-en="Regular contributor to AAEP Annual Meetings; panelist at Second World Inequality Conference (Paris, 2021); UNAM (Mexico, 2022)." data-es="Contribuidor habitual a las Reuniones Anuales de la AAEP; panelista en la Segunda Conferencia Mundial sobre Desigualdad (París, 2021); UNAM (México, 2022).">Regular contributor to AAEP Annual Meetings; panelist at Second World Inequality Conference (Paris, 2021); UNAM (Mexico, 2022).</span></div>
+      <div style="margin-top: 1rem;"><strong><i class="fas fa-chart-network"></i> <span data-en="Other roles" data-es="Otros roles">Other roles</span></strong><br><span data-en="Member of research networks, invited speaker on monetary policy challenges, and frequent contributor to policy forums in Latin America." data-es="Miembro de redes de investigación, orador invitado sobre desafíos de política monetaria y colaborador frecuente en foros de política en América Latina.">Member of research networks, invited speaker on monetary policy challenges, and frequent contributor to policy forums in Latin America.</span></div>
+    </div>
+  </div>
+
+  <footer>
+    <p><i class="far fa-copyright"></i> 2026 Fernando Toledo – <span data-en="Senior Macroeconomic Advisor" data-es="Asesor Macroeconómico Senior">Senior Macroeconomic Advisor</span></p>
+    <p style="margin-top: 0.5rem;"><i class="fas fa-envelope-open-text"></i> toledo.fernando.cesar@gmail.com | <a href="https://www.linkedin.com/in/fernando-toledo-19968aa8/" target="_blank" rel="noopener noreferrer" style="color:#5f7f9a;"><i class="fab fa-linkedin"></i> linkedin.com/in/fernando-toledo-eco</a></p>
+    <p class="text-small"><span data-en="Built for high-impact visibility · CV fully referenced from professional trajectory" data-es="Creado para máxima visibilidad · CV completamente referenciado a partir de la trayectoria profesional">Built for high-impact visibility · CV fully referenced from professional trajectory</span></p>
+  </footer>
+</div>
+
+<script>
+  // Language switcher
+  const enBtn = document.getElementById('lang-en');
+  const esBtn = document.getElementById('lang-es');
+  const elements = document.querySelectorAll('[data-en]');
+
+  function setLanguage(lang) {
+    elements.forEach(el => {
+      const text = el.getAttribute(`data-${lang}`);
+      if (text !== null) {
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          el.value = text;
+        } else {
+          el.innerHTML = text;
+        }
+      }
+    });
+    if (lang === 'en') {
+      enBtn.classList.add('active');
+      esBtn.classList.remove('active');
+      document.documentElement.lang = 'en';
+    } else {
+      esBtn.classList.add('active');
+      enBtn.classList.remove('active');
+      document.documentElement.lang = 'es';
+    }
+  }
+
+  enBtn.addEventListener('click', () => setLanguage('en'));
+  esBtn.addEventListener('click', () => setLanguage('es'));
+
+  // Handle image loading fallback
+  const img = document.getElementById('profile-img');
+  const placeholder = document.getElementById('avatar-placeholder');
+  if (img) {
+    img.onerror = function() {
+      img.style.display = 'none';
+      placeholder.style.display = 'flex';
+    };
+  }
+
+  // PDF download via print
+  const downloadBtn = document.getElementById('downloadCvBtn');
+  if(downloadBtn) {
+    downloadBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.print();
+    });
+  }
+
+  const stylePrint = document.createElement('style');
+  stylePrint.innerHTML = `@media print { body { background: white; } .btn-cv, .hero-avatar, .contact-bar a:not(.btn-cv), .lang-switch { display: none; } .container { max-width: 100%; padding: 0.2in; } .exp-item, .pub-item, .summary-card { break-inside: avoid; box-shadow: none; border: 1px solid #ccc; } a[href]:after { content: none; } }`;
+  document.head.appendChild(stylePrint);
+</script>
+</body>
+</html>
