@@ -39,18 +39,11 @@
       box-shadow: 0 8px 18px rgba(30,111,92,0.2);
       color: white !important;
     }
-    .hero-avatar { flex: 0 0 120px; text-align: center; position: relative; }
-    .hero-avatar img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 50%;
-      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-      border: 3px solid white;
-      background-color: #eef2f5;
-      display: block;
+    .hero-avatar {
+      flex: 0 0 120px;
+      text-align: center;
     }
-    .avatar-placeholder {
+    .avatar-circle {
       width: 120px;
       height: 120px;
       border-radius: 50%;
@@ -63,11 +56,6 @@
       color: #1e6f5c;
       box-shadow: 0 12px 24px rgba(0,0,0,0.05);
       border: 3px solid white;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
     }
     .summary-card { background: white; border-radius: 28px; padding: 1.8rem 2rem; margin-bottom: 2.5rem; box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.05); border: 1px solid #eef2f8; }
     .exp-item, .pub-item, .honor-item, .skill-cat { background: white; border-radius: 20px; padding: 1.5rem; margin-bottom: 1.25rem; box-shadow: 0 2px 10px rgba(0,0,0,0.02); border: 1px solid #e9edf2; transition: all 0.2s ease; }
@@ -112,7 +100,6 @@
     <button id="lang-es">ES</button>
   </div>
 
-  <!-- Hero Section -->
   <div class="hero">
     <div class="hero-info">
       <div class="hero-badge" data-en="20+ years · Central Bank & Multilateral Experience" data-es="20+ años · Banco Central y Experiencia Multilateral"><i class="fas fa-chart-line"></i> 20+ years · Central Bank & Multilateral Experience</div>
@@ -127,8 +114,7 @@
       <div class="text-small" style="margin-top: 0.5rem;"><i class="far fa-calendar-alt"></i> <span data-en="Last updated: March 2026 · La Plata, Buenos Aires, Argentina" data-es="Última actualización: Marzo 2026 · La Plata, Buenos Aires, Argentina">Last updated: March 2026 · La Plata, Buenos Aires, Argentina</span></div>
     </div>
     <div class="hero-avatar">
-      <img id="profile-img" src="Foto FT.jpeg" alt="Fernando Toledo" style="position: relative; z-index: 2;">
-      <div id="avatar-placeholder" class="avatar-placeholder" style="display: none;">FT</div>
+      <div class="avatar-circle">FT</div>
     </div>
   </div>
 
@@ -300,16 +286,6 @@
 
   enBtn.addEventListener('click', () => setLanguage('en'));
   esBtn.addEventListener('click', () => setLanguage('es'));
-
-  // Handle image loading fallback
-  const img = document.getElementById('profile-img');
-  const placeholder = document.getElementById('avatar-placeholder');
-  if (img) {
-    img.onerror = function() {
-      img.style.display = 'none';
-      placeholder.style.display = 'flex';
-    };
-  }
 
   // PDF download via print
   const downloadBtn = document.getElementById('downloadCvBtn');
